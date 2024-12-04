@@ -1,30 +1,69 @@
-/* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
-}
-
-.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+}
+.logotxt{
+  color: #00509e;
+  position: absolute;
+  font-weight: bold;
+  font-size: 13px;
+  top: 60px;
+  left: 260px;
+}
+.home {
+  display: flex;
+  width: 100%;
+}
+#image-with-fade {
+  position: relative;
+  width: 1; /* Adjust as needed */
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  /* Makes mask area transparent */
+  background-color: transparent;
 }
 
-/* Header */
 .header {
   background-color: #00509e;
   color: white;
   text-align: center;
-  padding: 20px 10px;
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: auto; /* In case content exceeds viewport */
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.header nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.psg {
   width: 100%;
 }
 
 .header h1 {
-  font-size: 2rem;
-  margin: 0;
+  font-size: 1.5rem;
+  margin: 20px;
 }
 
 .header p {
@@ -32,7 +71,19 @@ body {
   margin: 5px 0;
 }
 
-/* Sections */
+.rightside {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 500px; /* Matches the width of the left fixed section */
+  padding: 20px;
+  width: 70%;
+  overflow-y: auto; /* Enables scrolling for this section */
+  height: 100vh;
+  scrollbar-width: none;
+}
+
 section {
   padding: 20px;
   margin: 10px;
@@ -47,7 +98,10 @@ section {
 .committee,
 .thrust-areas,
 .registration {
+  width: 400px;
+  height: 300px;
   margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 section h2 {
@@ -72,17 +126,13 @@ section ul li {
   font-size: 0.9rem;
 }
 
-/* Footer */
 .footer {
   background-color: #00509e;
   color: white;
   text-align: center;
   padding: 10px;
-  width: 100%;
   margin-top: 20px;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 0.9rem;
+  width: 94%;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
